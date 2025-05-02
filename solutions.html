@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Solutions | PhishGuardians</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="PhishGuardians Logo">
+                <h1>PhishGuardians</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="types.html">Types of Phishing</a></li>
+                    <li><a href="cases.html">Real Life Stories</a></li>
+                    <li><a href="solutions.html" class="active">Solutions</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Phishing Protection Solutions</h2>
+            <p>Interactive tools and resources to safeguard against phishing attacks</p>
+        </div>
+    </section>
+
+    <section class="solution-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="cat-btn active" data-category="all">All Solutions</button>
+                <button class="cat-btn" data-category="awareness">Awareness</button>
+                <button class="cat-btn" data-category="verification">Verification</button>
+                <button class="cat-btn" data-category="prevention">Prevention</button>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- Solution 1: Fraud Scenario Simulator -->
+                <div class="solution-card" data-categories="awareness">
+                    <div class="solution-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="solution-content">
+                        <img src="assets/phish_solutions_visual.png" alt="Phishing Protection Visual" style="width:100%; border-radius: 12px; margin-bottom: 10px;">
+                        <h3>Fraud Scenario Simulator</h3>
+                        <p>Interactive simulations of real phishing scenarios to test your awareness</p>
+                        <div class="solution-features">
+                            <h4>Addresses:</h4>
+                            <ul>
+                                <li>Lack of awareness about phishing tactics</li>
+                                <li>Difficulty recognizing red flags</li>
+                            </ul>
+                        </div>
+                        <button class="btn-outline try-tool" data-tool="simulator" onclick="scrollToSection()" >Try Tool</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2: Caller Verification -->
+                <div class="solution-card" data-categories="verification">
+                    <div class="solution-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="solution-content">
+                        <img src="assets/callerverification.png" alt="Phishing Protection Visual" style="width:100%; border-radius: 12px; margin-bottom: 10px;">
+                        <h3>Caller Verification Check</h3>
+                        <p>Verify unknown callers against reported scam numbers database</p>
+                        <div class="solution-features">
+                            <h4>Addresses:</h4>
+                            <ul>
+                                <li>Trust in official-looking calls</li>
+                                <li>Vishing (phone call scams)</li>
+                            </ul>
+                        </div>
+                        <button class="btn-outline try-tool" data-tool="caller-check" onclick="scrollToSection()" >Check Now</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3: UPI Safety Quiz -->
+                <div class="solution-card" data-categories="awareness prevention">
+                    <div class="solution-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <div class="solution-content">
+                        <img src="assets/quiz.png" alt="Phishing Protection Visual" style="width:100%; border-radius: 12px; margin-bottom: 10px;">
+                        <h3>UPI Safety Quiz</h3>
+                        <p>Test your knowledge about secure UPI transactions</p>
+                        <div class="solution-features">
+                            <h4>Addresses:</h4>
+                            <ul>
+                                <li>Quick UPI payments without caution</li>
+                                <li>Lack of payment safety knowledge</li>
+                            </ul>
+                        </div>
+                        <button class="btn-outline try-tool" data-tool="upi-quiz" onclick="scrollToSection()">Start Quiz</button>
+                    </div>
+                </div>
+
+
+                <!-- Solution 4: Email Analyzer -->
+                <div class="solution-card" data-categories="verification">
+                    <div class="solution-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="solution-content">
+                        <img src="assets/email.jpeg" alt="Phishing Protection Visual" style="width:100%; border-radius: 12px; margin-bottom: 10px;">
+                        <h3>Email Analyzer</h3>
+                        <p>Check suspicious emails for phishing indicators</p>
+                        <div class="solution-features">
+                            <h4>Addresses:</h4>
+                            <ul>
+                                <li>Fake job offers (like Ananya's case)</li>
+                                <li>Email phishing attempts</li>
+                            </ul>
+                        </div>
+                        <button class="btn-outline try-tool" data-tool="email-check">Analyze Email</button>
+                    </div>
+                </div>
+
+                <!-- Solution 5: OTP Awareness -->
+                <div class="solution-card" data-categories="awareness prevention">
+                    <div class="solution-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="solution-content">
+                        <img src="assets/guide.png" alt="Phishing Protection Visual" style="width:100%; border-radius: 12px; margin-bottom: 10px;">
+                        <h3>OTP Safety Guide</h3>
+                        <p>Learn when and how to use OTPs safely</p>
+                        <div class="solution-features">
+                            <h4>Addresses:</h4>
+                            <ul>
+                                <li>OTP sharing scams (like Faizi's case)</li>
+                                <li>Lack of OTP awareness</li>
+                            </ul>
+                        </div>
+                        <button class="btn-outline try-tool" data-tool="otp-guide">View Guide</button>
+                    </div>
+                </div>
+
+                <!-- Solution 6: Scam Buster AI -->
+                <div class="solution-card" data-categories="verification prevention">
+                    <div class="solution-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="solution-content">
+                        <img src="assets/ai.png" alt="Phishing Protection Visual" style="width:100%; border-radius: 12px; margin-bottom: 10px;">
+                        <h3>Scam Buster AI</h3>
+                        <p>Chatbot that simulates scam calls/messages to train you</p>
+                        <div class="solution-features">
+                            <h4>Addresses:</h4>
+                            <ul>
+                                <li>Fear and urgency tactics</li>
+                                <li>Recognizing manipulation techniques</li>
+                            </ul>
+                        </div>
+                        <button class="btn-outline try-tool" data-tool="scam-bot">Try AI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section class="interactive-tools">
+        <div class="container">
+            <div class="tool-container" id="simulator-tool">
+                <h3>Fraud Scenario Simulator</h3>
+                <img src="assets/phising.png" alt="Phishing Protection Visual" style="width: 80%; height: 400px;; border-radius: 12px;">
+                <div class="scenario-selector">
+                    <select id="scenario-type">
+                        <option value="">Select a scenario</option>
+                        <option value="bank-call">Bank KYC Call (Like Ram Prasad)</option>
+                        <option value="job-offer">Job Offer Email (Like Ananya)</option>
+                        <option value="delivery-otp">Delivery OTP Scam (Like Faizi)</option>
+                        <!-- <option value="phishing-email">Recognizing a Phishing Email</option> -->
+                        <option value="urgent-bank-sms">Handling an Urgent Bank SMS</option>
+                    </select>
+                    <button id="start-simulation" class="btn">Start Simulation</button>
+                </div>
+
+                <div class="simulation-area hidden">
+                    <div class="simulation-message" id="sim-message">
+                        <!-- Dynamic content will be inserted here by JavaScript -->
+                    </div>
+                    <div class="simulation-options" id="sim-options">
+                        <!-- Options will be inserted here by JavaScript -->
+                    </div>
+                    <div class="simulation-feedback hidden" id="sim-feedback">
+                        <h4>Result:</h4>
+                        <p id="feedback-text"></p>
+                        <button id="next-scenario" class="btn-outline">Try Another Scenario</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-container hidden" id="caller-check-tool">
+                <h3>Caller Verification Check</h3>
+                <img src="assets/callerimage.png" alt="Phishing Protection Visual" style="width: 75%; height: 300px;; border-radius: 12px;">
+                <div class="verification-form">
+                    <input type="tel" id="caller-number" placeholder="Enter phone number to check">
+                    <button id="check-caller" class="btn">Verify Number</button>
+                </div>
+                <div class="verification-result hidden" id="caller-result">
+                    <h4>Verification Result:</h4>
+                    <p id="caller-result-text"></p>
+                    <div class="safety-tips">
+                        <h5>Safety Tips for Unknown Callers:</h5>
+                        <ul>
+                            <li>Never share OTPs, CVV, or passwords</li>
+                            <li>Hang up and call back on official numbers</li>
+                            <li>Check SMS sender IDs carefully</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-container hidden" id="upi-quiz-tool">
+                <h3>UPI Safety Quiz</h3>
+                <div class="quiz-progress">
+                    Question <span id="current-q">1</span> of <span id="total-q">5</span>
+                </div>
+                <div class="quiz-area">
+                    <p class="quiz-question" id="quiz-question"></p>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be inserted here by JavaScript -->
+                    </div>
+                    <button class="btn hidden" id="next-question">Next Question</button>
+                </div>
+                <div class="quiz-result hidden" id="quiz-result">
+                    <h4>Your Score: <span id="quiz-score">0</span>/5</h4>
+                    <p id="quiz-feedback"></p>
+                    <button id="retake-quiz" class="btn-outline">Retake Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="protection-guides">
+        <div class="container">
+            <h3>Comprehensive Protection Guides</h3>
+            <div class="guide-tabs">
+                <button class="guide-btn active" data-guide="banking">Banking Safety</button>
+                <button class="guide-btn" data-guide="upi">UPI Security</button>
+                <button class="guide-btn" data-guide="job">Job Scams</button>
+                <button class="guide-btn" data-guide="shopping">Online Shopping</button>
+            </div>
+
+            <div class="guide-content active" id="banking-guide">
+                <h4>Banking & ATM Safety Guide</h4>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <i class="fas fa-phone-slash"></i>
+                        <h5>Call Safety</h5>
+                        <ul>
+                            <li>Banks never call to ask for OTPs/CVV</li>
+                            <li>Never share card details over phone</li>
+                            <li>Hang up and call official bank number</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h5>SMS Alerts</h5>
+                        <ul>
+                            <li>Check sender ID (should be bank's official ID)</li>
+                            <li>Never click links in unexpected messages</li>
+                            <li>Report suspicious SMS to your bank</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-atm"></i>
+                        <h5>ATM Safety</h5>
+                        <ul>
+                            <li>Cover keypad when entering PIN</li>
+                            <li>Check for skimming devices</li>
+                            <li>Immediately report lost cards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-content" id="upi-guide">
+                <h4>UPI Transaction Safety</h4>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <i class="fas fa-user-check"></i>
+                        <h5>Verify Before Paying</h5>
+                        <ul>
+                            <li>Always confirm recipient name before sending</li>
+                            <li>Check last 3 digits of registered mobile</li>
+                            <li>Be wary of payment requests from unknown numbers</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-lock"></i>
+                        <h5>Security Settings</h5>
+                        <ul>
+                            <li>Enable biometric authentication</li>
+                            <li>Set transaction limits</li>
+                            <li>Use separate UPI PIN for different apps</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h5>Red Flags</h5>
+                        <ul>
+                            <li>Requests for "test transactions"</li>
+                            <li>Payments for "unblocking" accounts</li>
+                            <li>Refundable deposit requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-content" id="job-guide">
+                <h4>Avoiding Job Scams</h4>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <i class="fas fa-search"></i>
+                        <h5>Employer Verification</h5>
+                        <ul>
+                            <li>Check company website and LinkedIn</li>
+                            <li>Verify email domain matches company</li>
+                            <li>Search for reviews or scam reports</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h5>Payment Red Flags</h5>
+                        <ul>
+                            <li>Legitimate jobs don't ask for payment</li>
+                            <li>Beware of "training kit" or "verification" fees</li>
+                            <li>Never pay for background checks</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-envelope"></i>
+                        <h5>Email Indicators</h5>
+                        <ul>
+                            <li>Generic greetings instead of your name</li>
+                            <li>Poor grammar and spelling</li>
+                            <li>Mismatched sender email and company</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-content" id="shopping-guide">
+                <h4>Safe Online Shopping</h4>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <i class="fas fa-truck"></i>
+                        <h5>Delivery Scams</h5>
+                        <ul>
+                            <li>Only check order status on official site/app</li>
+                            <li>Never share OTPs for "delivery verification"</li>
+                            <li>Track shipments through retailer's portal</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-link"></i>
+                        <h5>Website Safety</h5>
+                        <ul>
+                            <li>Look for HTTPS and padlock icon</li>
+                            <li>Check domain name for misspellings</li>
+                            <li>Avoid too-good-to-be-true deals</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <i class="fas fa-undo"></i>
+                        <h5>Refund Scams</h5>
+                        <ul>
+                            <li>Legitimate refunds go back to original payment</li>
+                            <li>Never share account details for refunds</li>
+                            <li>Beware of "extra payment" requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About PhishGuardians</h4>
+                    <p>Educational initiative to combat phishing frauds through awareness and prevention tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="types.html">Types of Phishing</a></li>
+                        <li><a href="cases.html">Real Case Studies</a></li>
+                        <li><a href="solutions.html">Protection Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Report Fraud</h4>
+                    <ul>
+                        <li><a href="https://cybercrime.gov.in" target="_blank">Cyber Crime Portal</a></li>
+                        <li><a href="tel:1930">Helpline: 1930</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhishGuardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function scrollToSection() {
+          document.getElementById(".interactive-tools").scrollIntoView({ behavior: "smooth" });
+        }
+      </script>
+    <script src="script.js"></script>
+    <script src="solutions.js"></script>
+    <script>function scrollToSection() {
+        document.querySelector(".interactive-tools").scrollIntoView({ behavior: "smooth" });
+      }
+      </script>
+</body>
+</html>

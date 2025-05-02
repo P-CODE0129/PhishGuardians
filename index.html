@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>PhishGuardians - Protect Yourself from Phishing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="PhishGuardians Logo">
+                <h1>PhishGuardians</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="types.html">Types of Phishing</a></li>
+                    <li><a href="story.html">Real Life Stories</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Protect Yourself from Phishing Attacks</h2>
+                <p>Learn how to identify and prevent phishing scams targeting your personal and financial information.</p>
+                <a href="solutions.html" class="btn">Get Protected Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-image.png" alt="Phishing Awareness">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h3>Recent Phishing Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>3.4 Billion</h4>
+                    <p>Daily Spam Emails</p>
+                </div>
+                <div class="stat-card">
+                    <h4>75% Increase</h4>
+                    <p>Cloud Intrusions</p>
+                </div>
+                <div class="stat-card">
+                    <h4>23% Attacks</h4>
+                    <p>On Financial Institutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-tips">
+        <div class="container">
+            <h3>Quick Safety Tips</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Verify Emails</h4>
+                    <p>Check sender addresses carefully before clicking links or attachments.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Don't Share OTPs</h4>
+                    <p>Never share OTPs or CVV numbers with anyone claiming to be from your bank.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-link"></i>
+                    <h4>Inspect Links</h4>
+                    <p>Hover over links to see the actual URL before clicking.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-user-secret"></i>
+                    <h4>Verify Callers</h4>
+                    <p>Always call back on official numbers to verify unexpected calls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Did You Know Popup -->
+    <div class="dyk-popup" id="dykPopup">
+        <div class="dyk-content">
+            <span class="dyk-close">&times;</span>
+            <div class="dyk-header">
+                <img src="assets/shield-icon.png" alt="Security Shield" class="dyk-icon">
+                <h3>Did You Know? <span class="blink">!</span></h3>
+            </div>
+            <div class="dyk-body" id="dykText"></div>
+            <div class="dyk-footer">
+                <label>
+                    <input type="checkbox" id="dykMute"> Don't show tips for 24 hours
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About PhishGuardians</h4>
+                    <p>Educational initiative to combat phishing frauds through awareness and prevention tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="types.html">Types of Phishing</a></li>
+                        <li><a href="cases.html">Real Case Studies</a></li>
+                        <li><a href="solutions.html">Protection Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Report Fraud</h4>
+                    <ul>
+                        <li><a href="https://cybercrime.gov.in" target="_blank">Cyber Crime Portal</a></li>
+                        <li><a href="tel:1930">Helpline: 1930</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhishGuardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Did You Know Popup Script
+        const dykFacts = [
+            "UPI scams often involve fake payment screenshots. Always check your bank app directly!",
+            "Scammers pretend to be bank officials and ask for OTPs. Banks never ask for OTPs!",
+            "Fake KYC update scams have increased by 300% in 2023. Never click SMS links!",
+            "QR code scams can empty your account in seconds. Never scan unknown QR codes!",
+            "SIM swap frauds bypass OTP security. If your mobile network suddenly stops working, contact your provider immediately!",
+            "Fake job offers asking for registration fees are always scams. Legitimate companies never ask for money!"
+        ];
+
+        const dykPopup = document.getElementById('dykPopup');
+        const dykText = document.getElementById('dykText');
+        const dykClose = document.querySelector('.dyk-close');
+        const dykMute = document.getElementById('dykMute');
+
+        function showRandomFact() {
+            if(localStorage.getItem('dykMuted')) {
+                const muteTime = parseInt(localStorage.getItem('dykMuted'));
+                if(Date.now() - muteTime < 86400000) { // 24 hours
+                    return;
+                } else {
+                    localStorage.removeItem('dykMuted');
+                }
+            }
+
+            const randomFact = dykFacts[Math.floor(Math.random() * dykFacts.length)];
+            dykText.textContent = randomFact;
+            dykPopup.style.display = 'flex';
+        }
+
+        // Show first fact after 30 seconds
+        setTimeout(showRandomFact, 30000);
+
+        // Show new fact every 60 seconds after that
+        setInterval(showRandomFact, 60000);
+
+        dykClose.addEventListener('click', () => {
+            dykPopup.style.display = 'none';
+            if(dykMute.checked) {
+                localStorage.setItem('dykMuted', Date.now());
+            }
+        });
+
+        // Close when clicking outside
+        window.addEventListener('click', (e) => {
+            if(e.target === dykPopup) {
+                dykPopup.style.display = 'none';
+                if(dykMute.checked) {
+                    localStorage.setItem('dykMuted', Date.now());
+                }
+            }
+        });
+    </script>
+</body>
+</html>
